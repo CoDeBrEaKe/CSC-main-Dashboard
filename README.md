@@ -19,3 +19,7 @@ Modular, scalable code structure
 
 📁 Project Purpose
 The dashboard was built to improve transparency, streamline data presentation, and enhance accessibility for government stakeholders in Kuwait. It serves as a centralized platform to monitor metrics, KPIs, and other essential information.
+
+### 📡 Live Demo
+
+You can view the live dashboard here: [Government Dashboard – Kuwait](https://codebreake.github.io/CSC-main-Dashboard/)
