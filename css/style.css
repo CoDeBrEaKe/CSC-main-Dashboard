@@ -101,6 +101,9 @@ header .header-info {
   flex-direction: column;
   gap: 0px;
 }
+.user-name p{
+  font-size: 16px;
+}
 header .user-info img {
   width: 40px;
   height: 40px;
@@ -790,24 +793,44 @@ canvas {
 .receive-title {
   font-size: 18px;
 }
+.receivers-2,
 .receivers {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+.receivers-2{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.receivers-2 .row{
+  width: 100%;
+  display: flex ;
+  gap:10px;
+}
+
+.receivers-2 .receiver-details,
 .receivers .receiver-details {
   display: flex;
   gap: 8px;
 }
+.receivers-2 .receiver-details img,
 .receivers .receiver-details img {
   width: 24px;
   height: 24px;
 }
 .single-receiver {
-  width: 50%;
+  width: 45%;
   display: flex;
   justify-content: space-between;
 }
+.receivers-2 .single-receiver{
+  background-color: #eee;
+  align-items: center;
+  padding: 4px;
+  border-radius: 12px;
+}
+
 .single-receiver img {
   width: 20px;
   height: 20px;
@@ -1055,7 +1078,7 @@ input[type="date"] {
   margin: 8px 20px;
 }
 .col-head {
-  min-width: 190px;
+  min-width: 160px;
   display: flex;
   gap: 8px;
 }
@@ -1235,24 +1258,110 @@ aside:hover ul li span {
   background-color: var(--light-gold);
   color: white;
 }
+.tabs{
+  height: 100%;
+}
+.tabs .signout img{
+  cursor: pointer;
+}
 .tabs .signout {
   padding: 0 20px;
-  position: absolute;
-  display: none;
-  bottom: 20px;
   justify-self: flex-end;
-  align-items: flex-start;
+  display: flex;
+  gap:20px;
+  align-items: center;
+  align-self: baseline;
 }
 
-aside:hover .tabs .signout {
+
+aside:hover .tabs .signout a {
   display: block;
 }
 .tabs .signout a {
+  display: none;
   color: black;
   text-align: right;
   text-decoration: none;
 }
 /* End Tabs */
+/* Start forwarding form */
+.search-recievers{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 12px;
+  background-color: white;
+}
+.forward-form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.forward-form input{
+  width: 100%;
+  background-color: #eee;
+  border: none;
+  outline:  none;
+  border-radius: 12px;
+  padding:8px
+}
+/* end forwarding form */
+/* Start Arbitarty */
+.arbitary{
+  margin-top: 20px;
+  background-color: #fafafa;
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.arbitary .main-section{
+  padding: 12px;
+}
+
+.arbitary .main-section .section.active{
+  display: block;
+}
+.arbitary .section.expanded::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #ddd;
+  height:calc(100% - 40px);
+  right: 5px;
+  top:34px;
+}
+.arbitary .section.expanded::before{
+  content: url("../assets/arrow-up.png");
+}
+.arbitary .section::before{
+  content: url("../assets/arrow-down2.png");
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top:4px;
+}
+
+/* .arbitary .section:last-of-type::before{ */
+ .main-section .section{
+  display: none;
+}
+.arbitary .section{
+  position: relative;
+  padding:8px 20px ;
+  cursor: pointer;
+}
+.arbitary .section .section-details img{
+  width:30px;
+  height: 30px;
+}
+.arbitary .section .section-details{
+  display: flex;
+  align-items: center;
+  gap:8px;
+}
+/* End Arbitarty */
 /* Start Actions */
 .actions {
   display: flex;
@@ -1303,6 +1412,9 @@ aside:hover .tabs .signout {
   display: flex;
   flex-direction: column;
   padding: 12px;
+}
+.draft-header {
+  display: flex;
 }
 .column {
   width: 100%;
@@ -1441,6 +1553,44 @@ footer .container {
   cursor: pointer;
 }
 @media (max-width: 920px) {
+  aside{
+    width: 250px;
+  }
+  .dashboard aside .tabs ul {
+    width:max-content
+  }
+  /* While hovering */
+.dashboard aside:hover {
+  width: 70px;
+}
+.dashboard aside:hover .tabs ul {
+  /* align-items: stretch; */
+  
+  display: flex;
+}
+.dashboard aside:hover .tabs ul li {
+  width: 100%;
+}
+.dashboard aside:hover .tabs ul li a {
+  display: none;
+}
+.dashboard aside:hover .tabs ul li img {
+  display: block;
+}
+.dashboard aside:hover img.name {
+  display: none;
+}
+.dashboard aside:hover .user-info {
+  padding: 0px;
+  height: 60px
+}
+aside:hover .tabs ul li span {
+  display: none;
+}
+aside:hover .tabs .signout a {
+  display: none;
+}
+
   .header-info {
     flex-direction: column;
   }

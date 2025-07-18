@@ -184,42 +184,44 @@
             <ul>
               <li>
                 <img src="assets/home.png" />
-                <a href=""> الرئيسية</a>
+                <a href="./homepage.html"> الرئيسية</a>
               </li>
               <li>
                 <img src="assets/directbox-receive.png" />
-                <a href="">البريد الوارد</a>
+                <a href="./inbox.html">البريد الوارد</a>
               </li>
               <li class="active">
                 <img src="assets/directbox-send.png" />
-                <a href="">البريد الصادر</a>
+                <a href="./sent.html">البريد الصادر</a>
+                <span>1</span>
               </li>
               <li>
                 <img src="assets/more-circle.png" />
-                <a href="">المهام الجديدة</a>
+                <a href="./new-missions.html">المهام الجديدة</a>
               </li>
               <li>
                 <img src="assets/stickynote.png" />
-                <a href="">المسودة</a>
+                <a href="./draft.html">المسودة</a>
               </li>
               <li>
                 <img src="assets/more-circle.png" />
-                <a href="">التعميمات</a>
+                <a href="./publicity.html">التعميمات</a>
               </li>
               <li>
                 <img src="assets/document.png" />
-                <a href="">متابعة المهام المحولة</a>
+                <a href="./forwarded-tasks.html">متابعة المهام المحولة</a>
               </li>
               <li>
                 <img src="assets/search.png" />
-                <a href=""> بحث</a>
+                <a href="./search-admin-files.html"> بحث</a>
               </li>
               <li>
                 <img src="assets/note.png" />
-                <a href="">التقارير</a>
+                <a href="./records.html">التقارير</a>
               </li>
             </ul>
             <div class="signout">
+              <img src="assets/Logout.png" />
               <a href="">تسجيل الخروج</a>
             </div>
           </div>
@@ -447,5 +449,41 @@
     </main>
 
     <script src="js/index.js" defer></script>
+    <script>
+      let exportBtn = document.querySelector(".export-btn");
+
+      exportBtn.addEventListener("click", () => {
+        document.querySelector(".export-card").classList.toggle("active");
+      });
+      let modalTrigger = document.querySelector(".answer-note");
+      modalTrigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(".export-card").classList.toggle("active");
+        document.querySelector(".modal-bg").classList.toggle("active");
+        document.body.style.overflow = "hidden";
+      });
+      document.querySelector(".modal-bg").addEventListener("click", (e) => {
+        if (e.target == document.querySelector(".modal-bg")) {
+          document.body.style.overflow = "scroll";
+          document.querySelector(".modal-bg").classList.toggle("active");
+        }
+      });
+      document.querySelector(".notify").addEventListener("click", () => {
+        document.querySelector(".notification-bg").classList.toggle("active");
+        document.querySelector(".notification").classList.toggle("active");
+        document.body.style.overflow = "hidden";
+      });
+      document
+        .querySelector(".notification-bg")
+        .addEventListener("click", (e) => {
+          if (e.target == document.querySelector(".notification-bg")) {
+            document.body.style.overflow = "scroll";
+            document
+              .querySelector(".notification-bg")
+              .classList.toggle("active");
+            document.querySelector(".notification").classList.toggle("active");
+          }
+        });
+    </script>
   </body>
 </html>

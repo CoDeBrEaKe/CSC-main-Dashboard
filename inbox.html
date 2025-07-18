@@ -221,6 +221,7 @@
               </li>
             </ul>
             <div class="signout">
+              <img src="assets/Logout.png" />
               <a href="">تسجيل الخروج</a>
             </div>
           </div>
@@ -448,5 +449,41 @@
     </main>
 
     <script src="js/index.js" defer></script>
+    <script>
+      let exportBtn = document.querySelector(".export-btn");
+
+      exportBtn.addEventListener("click", () => {
+        document.querySelector(".export-card").classList.toggle("active");
+      });
+      let modalTrigger = document.querySelector(".answer-note");
+      modalTrigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(".export-card").classList.toggle("active");
+        document.querySelector(".modal-bg").classList.toggle("active");
+        document.body.style.overflow = "hidden";
+      });
+      document.querySelector(".modal-bg").addEventListener("click", (e) => {
+        if (e.target == document.querySelector(".modal-bg")) {
+          document.body.style.overflow = "scroll";
+          document.querySelector(".modal-bg").classList.toggle("active");
+        }
+      });
+      document.querySelector(".notify").addEventListener("click", () => {
+        document.querySelector(".notification-bg").classList.toggle("active");
+        document.querySelector(".notification").classList.toggle("active");
+        document.body.style.overflow = "hidden";
+      });
+      document
+        .querySelector(".notification-bg")
+        .addEventListener("click", (e) => {
+          if (e.target == document.querySelector(".notification-bg")) {
+            document.body.style.overflow = "scroll";
+            document
+              .querySelector(".notification-bg")
+              .classList.toggle("active");
+            document.querySelector(".notification").classList.toggle("active");
+          }
+        });
+    </script>
   </body>
 </html>
