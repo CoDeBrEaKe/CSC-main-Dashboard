@@ -6,6 +6,17 @@
   box-sizing: border-box;
   font-family: "Cairo";
 }
+a{
+  color: #333;
+  text-decoration: none;
+}
+p, label ,span{
+  font-size: 16px !important;
+   white-space: nowrap;
+}
+.show{
+  visibility: hidden;
+}
 :root {
   --main-goldish: #c4a174;
   --light-gold: #c9ae81;
@@ -21,6 +32,7 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow-x: hidden !important;
+  background-color: #e0e0e0
 }
 main {
   flex: 1;
@@ -48,7 +60,7 @@ header .container {
   width: fit-content;
 }
 .logo-cont img {
-  max-width: 100%;
+  max-width: 65%;
 }
 img.name {
   display: none;
@@ -231,7 +243,7 @@ main {
   flex-grow: 1;
 }
 .sections {
-  width: 84%;
+  max-width: 1400px;
   margin: auto;
   padding: 20px 0;
   display: flex;
@@ -242,19 +254,19 @@ main {
 }
 .section-card {
   cursor: pointer;
-  min-width: 350px;
-  padding: 20px;
+  width: 330px;
+  padding: 8px;
   text-align: center;
   border-radius: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 12px;
   background-color: white;
 }
 .section-card h2 {
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 500;
 }
 .section-card {
@@ -267,10 +279,7 @@ main {
   display: flex;
   position: relative;
 }
-.frame {
-  position: relative;
-  z-index: -1;
-}
+
 .iframe-modal,
 .notification-bg,
 .modal-bg-edit,
@@ -285,6 +294,7 @@ main {
   z-index: 2;
   overflow: hidden;
 }
+
 .iframe-modal,
 .modal-bg-edit,
 .modal-bg {
@@ -494,13 +504,17 @@ main {
   width: 70px;
   padding: 8px;
   background-color: white;
-  transition: all 0.5s;
+  transition: width 0.5s ease;
   min-height: 100vh;
 }
 /* While hovering */
-.dashboard aside:hover {
+@media (min-width: 920px) {
+  .dashboard aside:hover {
   width: 250px;
 }
+
+}
+
 .dashboard aside:hover img.name {
   display: block;
 }
@@ -550,7 +564,14 @@ aside .logo-cont {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  padding: 12px;
+  padding: 8px;
+}
+.choose-ministry.full  {
+  gap:20px;
+}
+.choose-ministry.full  .choice {
+  display: flex;
+  flex: 1;
 }
 .manipulate-draft .save,
 .choose-ministry .save {
@@ -560,7 +581,8 @@ aside .logo-cont {
 }
 .manipulate-draft .save div,
 .choose-ministry .save div {
-  padding: 8px 12px;
+  padding: 4px 8px;
+  font-size: 16px;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -589,15 +611,16 @@ aside .logo-cont {
   display: flex;
   gap: 12px;
   align-items: center;
-}
-.choice {
   font-size: 20px;
 }
 .choice select {
-  min-width: 500px;
+  max-width: 500px;
   border: 1px solid #eee;
   border-radius: 8px;
   background-color: #f6f6f6;
+}
+.choice label {
+   white-space: nowrap;
 }
 .choose-ministry a {
   width: 30px;
@@ -745,6 +768,7 @@ canvas {
 .export-card.active {
   display: block;
 }
+
 .export-card {
   display: none;
   position: absolute;
@@ -768,13 +792,17 @@ canvas {
   color: black;
   text-decoration: none;
 }
+ body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
 .export-btn {
   cursor: pointer;
   color: white;
   width: 100%;
   padding: 8px 0;
   background-color: var(--light-gold);
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
 }
 .whole-editor {
@@ -782,6 +810,7 @@ canvas {
 }
 .book-details {
   width: 50%;
+  flex:1;
   background-color: white;
   padding: 20px;
   min-height: 100vh;
@@ -824,7 +853,7 @@ canvas {
   display: flex;
   justify-content: space-between;
 }
-.receivers-2 .single-receiver{
+ .single-receiver{
   background-color: #eee;
   align-items: center;
   padding: 4px;
@@ -871,8 +900,8 @@ canvas {
   text-wrap-mode: nowrap;
 }
 .editing .tools .tool img {
-  height: 16px;
-  width: 16px;
+  max-height: 16px;
+  max-width: 16px;
 }
 .file-preview {
   padding: 8px;
@@ -880,6 +909,7 @@ canvas {
   flex-direction: column;
   gap: 12px;
   flex: 1;
+  background-color: white;
 }
 .file-preview div img {
   width: 16px;
@@ -938,6 +968,8 @@ canvas {
   padding: 8px 0;
   flex: 1;
   border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 .buttons .singature {
   background-color: #f19a4b;
@@ -983,11 +1015,6 @@ input[type="date"] {
   padding-left: 30px;
 }
 
-.export-form .inputs-row .input-cont select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
 .export-form .inputs-row .input-cont select,
 .export-form .inputs-row .input-cont input {
   background-color: var(--light-grey);
@@ -1064,6 +1091,9 @@ input[type="date"] {
 .data-header {
   background-color: wheat;
 }
+.data-header p{
+  font-weight: 600;
+}
 .data-header,
 .data-row {
   padding: 8px;
@@ -1077,14 +1107,18 @@ input[type="date"] {
 .col-input {
   margin: 8px 20px;
 }
+.transaction-head{
+  color: rgba(0, 122, 255, 1);
+}
 .col-head {
-  min-width: 160px;
+  flex: 1;
   display: flex;
   gap: 8px;
+  padding: 12px;
 }
 .col-head img {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 .col-head .expand {
   cursor: pointer;
@@ -1102,6 +1136,8 @@ input[type="date"] {
   display: none;
 }
 .details-data .details-tabs {
+  width: 100%;
+  gap: 10px;
   display: flex;
   gap: 8px;
 }
@@ -1114,6 +1150,8 @@ input[type="date"] {
   border-radius: 12px;
   background-color: #eee;
   padding: 8px 12px;
+  flex:1;
+  text-align: center;
 }
 .details {
   padding: 12px;
@@ -1133,9 +1171,13 @@ input[type="date"] {
 .single-detail {
   display: flex;
   align-items: baseline;
-  gap: 30px;
+  justify-content: space-between;
   position: relative;
   padding: 0 40px;
+  font-size: 14px;
+}
+.single-detail img{
+  width: 70px;
 }
 
 .single-detail::after {
@@ -1199,6 +1241,7 @@ input[type="date"] {
   flex-direction: column;
   justify-content: space-between;
   align-self: stretch;
+  align-items: center;
 }
 .tabs ul {
   overflow: hidden;
@@ -1260,6 +1303,7 @@ aside:hover ul li span {
 }
 .tabs{
   height: 100%;
+    overflow: hidden;
 }
 .tabs .signout img{
   cursor: pointer;
@@ -1271,6 +1315,7 @@ aside:hover ul li span {
   gap:20px;
   align-items: center;
   align-self: baseline;
+
 }
 
 
@@ -1374,6 +1419,7 @@ aside:hover .tabs .signout a {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex:1
 }
 .docs div img {
   width: 20px;
@@ -1395,16 +1441,16 @@ aside:hover .tabs .signout a {
 .actions .search::before {
   content: url("../assets/search.png");
   position: absolute;
-  padding: 8px;
-  right: 5px;
+  padding: 4px;
+  right: 0px;
   top: 0px;
 }
 .actions .search input {
   background-color: rgba(238, 238, 238, 1);
   border: 0;
   outline: 0;
-  padding: 8px 50px 8px;
-  min-width: 300px;
+  padding: 4px 28px 4px;
+  max-width: 300px;
   border-radius: 8px;
 }
 .draft-data {
@@ -1428,6 +1474,7 @@ aside:hover .tabs .signout a {
   padding-right: 12px;
 }
 .first-item {
+  padding: 12px;
   width: 100%;
   font-size: 18px;
   background-color: rgba(244, 235, 208, 1);
@@ -1553,15 +1600,19 @@ footer .container {
   cursor: pointer;
 }
 @media (max-width: 920px) {
-  aside{
-    width: 250px;
+  .main-background {
+    padding: 30px;
   }
+  
   .dashboard aside .tabs ul {
     width:max-content
   }
   /* While hovering */
 .dashboard aside:hover {
   width: 70px;
+}
+.export-section .export-btn {
+  padding: 0px 0!important;
 }
 .dashboard aside:hover .tabs ul {
   /* align-items: stretch; */
@@ -1599,7 +1650,7 @@ aside:hover .tabs .signout a {
   }
   .support-card,
   .login-card {
-    width: 96%;
+    /* width: 96%; */
     padding: 20px;
     font-size: 14px;
   }
@@ -1620,9 +1671,47 @@ aside:hover .tabs .signout a {
   .time-wrapper {
     flex-direction: column;
   }
+  .whole-editor{
+  flex-direction: column;
+}
+.book-details{
+  width: 100%;
+}
+.editor{
+  max-width: 100%;
+}
+.editing .tools .tools-group {
+  padding:4px !important;
+  gap:0px;
+}
+.editing .tools .tool {
+  padding: 4px;
+}
 }
 @media (max-width: 520px) {
   .time-wrapper {
     display: none;
   }
+  .dashboard .nav {
+    justify-content: flex-end;
+  }
+  
+.search-transactions-section .four-input-row {
+    flex-direction: column;
+        align-items: flex-start;
+
+  }
+  .pages{
+    align-items: center;
+  }
+  .page-numbers {
+    display: flex;
+    justify-content: space-between;  
+  }
+  .first-item {
+  padding: 4px;
+}
+.full .input-quarter {
+  width: 55% !important
+}
 }

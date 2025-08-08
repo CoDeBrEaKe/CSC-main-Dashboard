@@ -41,20 +41,10 @@
     <!-- Start Main -->
     <main>
       <div class="main-background">
-        <form class="support-card" action="./index.html">
-          <h1>طلب الدعم الفني</h1>
-          <!-- Row Input -->
-          <div class="inputs-row">
-            <div class="input-cont">
-              <label for="national">الرقم المدني</label>
-              <input
-                type="number"
-                name="national"
-                id="national"
-                placeholder="أدخل هنا"
-              />
-            </div>
-            <div class="input-cont">
+        <form class="login-card">
+          <h1>تسجيل الدخول</h1>
+          <div class="input-cont">
+            <div class="email">
               <label for="email">اسم المستخدم أو البريد الإلكتروني</label>
               <input
                 type="text"
@@ -64,62 +54,31 @@
               />
             </div>
           </div>
-          <!-- End Row Input -->
-          <!-- Row Input -->
-          <div class="inputs-row">
-            <div class="input-cont">
-              <label for="name">الاسم</label>
-              <input type="text" name="name" id="name" placeholder="أدخل هنا" />
-            </div>
-            <div class="input-cont">
-              <label for="phone">رقم الهاتف</label>
+          <div class="input-cont">
+            <label for="password">كلمة المرور</label>
+            <div class="password">
               <input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="أدخل هنا"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="أدخل كلمة المرور"
               />
             </div>
           </div>
-          <!-- End Row Input -->
-          <!-- Row Input -->
-          <div class="inputs-row">
-            <div class="input-cont">
-              <label for="subject">الموضوع</label>
-              <select name="subject" id="subject">
-                <option value="طلب مستخدم جديد" selected>
-                  طلب مستخدم جديد
-                </option>
-              </select>
+
+          <div class="other-links">
+            <div class="check-input">
+              <input type="checkbox" name="remember" id="remember" />
+              <label for="remember">تذكرني</label>
             </div>
-            <div class="input-cont">
-              <label for="system">النظام</label>
-              <select name="system" id="system" placeholder="أدخل هنا">
-                <option value="أنظمة التراسل" selected disabled>
-                  أنظمة التراسل
-                </option>
-              </select>
-            </div>
+            <a href="./">هل نسيت كلمة المرور</a>
+            <a href="./support.html">طلب دعم فني</a>
           </div>
-          <!-- End Row Input -->
-          <!-- Row Input -->
-          <div class="inputs-row">
-            <div class="input-cont">
-              <label for="description">الوصف</label>
-              <input
-                type="text"
-                name="description"
-                id="description"
-                placeholder="أدخل هنا"
-              />
-            </div>
-          </div>
-          <!-- End Row Input -->
           <button>تسجيل الدخول</button>
         </form>
       </div>
     </main>
-
+    <!-- End Main -->
     <footer>
       <div class="container">
         <div class="logo-cont">
