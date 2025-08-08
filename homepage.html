@@ -145,19 +145,19 @@
               </div>
             </div>
             <div class="get-result">
-              <a href="">الذهاب</a>
+              <a href="./reply.html">الذهاب</a>
             </div>
           </div>
         </div>
         <aside>
           <div class="top-options">
             <div class="back-arrow">
-              <a href="./homepage.html"
+              <a href="./main.html"
                 ><img src="./assets/arrow.png" alt="arrow"
               /></a>
             </div>
             <div class="logo-cont">
-              <a href="./homepage.html">
+              <a href="./main.html">
                 <img src="./assets/Group 2.png" alt="logo" />
                 <img
                   src="./assets/Group 3.png"
@@ -179,7 +179,9 @@
             <div class="export-btn">إصدار</div>
             <div class="export-card">
               <div><a href="./export.html">إصدار مذكرة جديدة</a></div>
-              <div class="answer-note"><a href="">الرد علي مذكرة</a></div>
+              <div class="answer-note">
+                <a href="">الرد علي مذكرة</a>
+              </div>
             </div>
           </div>
           <div class="tabs">
@@ -215,7 +217,7 @@
               </li>
               <li>
                 <img src="./assets/search.png" />
-                <a href="./search-admin-files.html"> بحث</a>
+                <a href="./search-transactions.html"> بحث</a>
               </li>
               <li>
                 <img src="./assets/note.png" />
@@ -224,7 +226,7 @@
             </ul>
             <div class="signout">
               <img src="./assets/Logout.png" />
-              <a href="">تسجيل الخروج</a>
+              <a href="./login.html">تسجيل الخروج</a>
             </div>
           </div>
         </aside>
@@ -451,17 +453,17 @@
 
           datasets: [
             {
-              labels: "ss",
+              label: "إدارة 1",
               data: [100, 150, 220, 90, 420, 330, 280],
               borderWidth: 1,
               borderRadius: 16,
               backgroundColor: [
-                "rgba(255, 99, 132, 0.7)", // Red
-                "rgba(54, 162, 235, 0.7)", // Blue
-                "rgba(0, 0, 0, 0.7 )", // Yellow
-                "rgba(75, 192, 192, 0.7)", // Green
-                "rgba(153, 102, 255, 0.7)", // Purple
-                "rgba(255, 159, 64, 0.7)", // Orange
+                "rgba(189, 172, 121, 1)",
+                "rgba(180, 180, 126, 1)",
+                "rgba(176, 122, 124, 1)",
+                "rgba(165, 150, 129, 1)",
+                "rgba(134, 138, 142, 1)",
+                "rgba(196, 161, 116, 1)",
               ],
             },
           ],
@@ -492,8 +494,8 @@
               borderWidth: 1,
               borderRadius: 16,
               backgroundColor: [
-                "rgba(255, 99, 132, 0.7)", // Red
-                "rgba(255, 159, 64, 0.7)", // Orange
+                "rgba(196, 161, 116, 1)", // Red
+                "rgba(176, 122, 124, 1)", // Orange
               ],
             },
           ],
@@ -535,16 +537,17 @@
 
           datasets: [
             {
+              label: "إدارة 1",
               data: [100, 150, 220, 90, 420, 330, 280],
               borderWidth: 1,
               borderRadius: 16,
               backgroundColor: [
-                "rgba(255, 99, 132, 0.7)", // Red
-                "rgba(54, 162, 235, 0.7)", // Blue
-                "rgba(255, 206, 86, 0.7)", // Yellow
-                "rgba(75, 192, 192, 0.7)", // Green
-                "rgba(153, 102, 255, 0.7)", // Purple
-                "rgba(255, 159, 64, 0.7)", // Orange
+                "rgba(189, 172, 121, 1)",
+                "rgba(180, 180, 126, 1)",
+                "rgba(176, 122, 124, 1)",
+                "rgba(165, 150, 129, 1)",
+                "rgba(134, 138, 142, 1)",
+                "rgba(196, 161, 116, 1)",
               ],
             },
           ],
@@ -567,16 +570,17 @@
       let myChart4 = new Chart(ctx4, {
         type: "pie",
         data: {
-          labels: ["إدارة 1", "إدارة 1"],
+          label: ["إدارة 1", "إدارة 1"],
 
           datasets: [
             {
+              label: "إدارة 1",
               data: [100, 150],
               borderWidth: 1,
               borderRadius: 16,
               backgroundColor: [
-                "rgba(255, 99, 132, 0.7)", // Red
-                "rgba(255, 159, 64, 0.7)", // Orange
+                "rgba(189, 172, 121, 1)",
+                "rgba(165, 75, 110, 1)",
               ],
             },
           ],
@@ -590,9 +594,9 @@
             label: "My First Dataset",
             data: [300, 50, 100],
             backgroundColor: [
-              "rgb(255, 99, 132)",
-              "rgb(54, 162, 235)",
-              "rgb(255, 205, 86)",
+              "rgba(189, 172, 121, 1)",
+              "rgba(180, 180, 126, 1)",
+              "rgba(176, 122, 124, 1)",
             ],
             hoverOffset: 4,
           },
@@ -630,10 +634,12 @@
 
       // Rainbow colors (ROYGBIV)
       const rainbowColors = [
-        "rgba(0, 255, 0, 0.7)", // Green
-        "rgba(0, 0, 255, 0.7)", // Blue
-        "rgba(75, 0, 130, 0.7)", // Indigo
-        "rgba(148, 0, 211, 0.7)", // Violet
+        "rgba(189, 172, 121, 1)",
+        "rgba(180, 180, 126, 1)",
+        "rgba(176, 122, 124, 1)",
+        "rgba(165, 150, 129, 1)",
+        "rgba(134, 138, 142, 1)",
+        "rgba(196, 161, 116, 1)",
       ];
 
       // Equal values to create equal-width bands
@@ -682,28 +688,28 @@
             {
               label: "Product B",
               data: data.B,
-              backgroundColor: "rgba(54, 162, 235, 0.7)",
+              backgroundColor: "rgba(189, 172, 121, 1)",
               borderColor: "rgba(54, 162, 235, 1)",
               borderWidth: 1,
             },
             {
               label: "Product C",
               data: data.C,
-              backgroundColor: "rgba(255, 206, 86, 0.7)",
+              backgroundColor: "rgba(180, 180, 126, 1)",
               borderColor: "rgba(255, 206, 86, 1)",
               borderWidth: 1,
             },
             {
               label: "Product D",
               data: data.D,
-              backgroundColor: "rgba(75, 192, 192, 0.7)",
+              backgroundColor: "rgba(134, 138, 142, 1)",
               borderColor: "rgba(75, 192, 192, 1)",
               borderWidth: 1,
             },
             {
               label: "Product E",
               data: data.E,
-              backgroundColor: "rgba(153, 102, 255, 0.7)",
+              backgroundColor: "rgba(176, 122, 124, 1)",
               borderColor: "rgba(153, 102, 255, 1)",
               borderWidth: 1,
             },

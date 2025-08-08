@@ -215,7 +215,7 @@
                 <img src="./assets/document.png" />
                 <a href="./forwarded-tasks.html">متابعة المهام المحولة</a>
               </li>
-              <li class="active">
+              <li>
                 <img src="./assets/search.png" />
                 <a href="./search-transactions.html"> بحث</a>
               </li>
@@ -245,7 +245,7 @@
             </div>
             <div class="help">
               <a href=""><img src="./assets/question.png" alt="question" /></a>
-              <a href="./support.html"
+              <a href=""
                 ><img src="./assets/support_svgrepo.com.png" alt="support"
               /></a>
               <div>
@@ -261,93 +261,236 @@
           <!-- Start choose ministry -->
           <div class="choose-ministry">
             <div class="choice">
-              <a href="./main.html"
-                ><img src="./assets/arrow.png" alt="arrow"
-              /></a>
-              <p>تحويل كتاب</p>
+              <p>إصدار</p>
+            </div>
+            <div class="save">
+              <div>
+                <a href="">حفظ في مسودة</a>
+                <img src="./assets/stickynote.png" />
+              </div>
+              <div>
+                <a href="">الذهاب للمراجعة</a>
+                <img src="./assets/send.png" />
+              </div>
             </div>
           </div>
           <!-- End choose ministry -->
           <!-- Start Editor -->
           <div class="whole-editor">
-            <div class="search-recievers">
-              <form class="forward-form">
-                <div>
-                  <label for="recieve-date">يرجي تحديد تاريخ التسليم</label>
-                  <input type="date" name="recieve-date" />
+            <div class="book-details">
+              <div class="book-title">
+                <p>بيانات الكتاب</p>
+              </div>
+              <form action="" class="export-form">
+                <!-- Row Input -->
+                <div class="inputs-row">
+                  <div class="input-cont">
+                    <label for="type">نوع الوثيقة</label>
+                    <select name="district" type="text">
+                      <option value="اختر هنا" selected disabled>
+                        اختر هنا
+                      </option>
+                    </select>
+                  </div>
+                  <div class="input-cont">
+                    <label for="department">الإدارة المعنية</label>
+                    <input
+                      type="text"
+                      name="department"
+                      id="department"
+                      placeholder="أدخل هنا"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <label for="search">المستقبلين</label>
-                  <input type="text" name="search" placeholder="بحث" />
+                <!-- End Row Input -->
+                <!-- Row Input -->
+                <div class="inputs-row">
+                  <div class="input-cont">
+                    <label for="transaction">تاريخ المعاملة</label>
+                    <input
+                      type="date"
+                      name="transaction"
+                      id="transaction"
+                      placeholder="أدخل هنا"
+                    />
+                  </div>
+                  <div class="input-cont">
+                    <label for="book">تاريخ الكتاب</label>
+                    <input type="date" name="book" id="book" dir="ltr" />
+                  </div>
                 </div>
+                <!-- End Row Input -->
+                <!-- Row Input -->
+                <div class="inputs-row">
+                  <div class="input-cont">
+                    <label for="subject">الموضوع</label>
+                    <input name="subject" id="subject" placeholder="اكتب هنا" />
+                  </div>
+                  <div class="input-cont">
+                    <label for="district">الجهة</label>
+                    <select
+                      name="district"
+                      id="district"
+                      placeholder="أدخل هنا"
+                    >
+                      <option value="اختر" selected disabled>اختر</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- End Row Input -->
+                <!-- Row Input -->
+                <div class="inputs-row">
+                  <div class="input-cont">
+                    <label for="notes">الملاحظات</label>
+                    <input
+                      type="text"
+                      name="notes"
+                      id="notes"
+                      placeholder="أدخل هنا"
+                    />
+                  </div>
+                </div>
+                <!-- End Row Input -->
+                <!-- Row Input -->
+                <div class="inputs-row" style="width: 100%">
+                  <div class="input-cont">
+                    <label for="recieve">طريقة الاستلام</label>
+                    <select type="text" name="recieve" id="recieve">
+                      <option value="اختر">اختر</option>
+                      <option value="خاص" selected disabled>خاص</option>
+                    </select>
+                  </div>
+                  <div class="input-cont">
+                    <label for="recieve">ادخل الرقم المدني للمستلم</label>
+                    <input
+                      type="text"
+                      name="id"
+                      id="id"
+                      placeholder="ادخل هنا"
+                    />
+                  </div>
+                </div>
+                <!-- End Row Input -->
+                <!-- Row Input -->
+                <div class="inputs-row" style="width: 100%">
+                  <div class="input-cont">
+                    <p class="receive-title">المستلمين</p>
+                    <div class="receivers">
+                      <div class="single-receiver">
+                        <div class="receiver-details">
+                          <img src="./assets/person.png" alt="person" />
+                          <p>احمد احمد</p>
+                        </div>
+                        <img src="./assets/close 2.png" alt="close" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Row Input -->
               </form>
-              <div class="input-cont">
-                <p class="receive-title">المستلمين</p>
-                <div class="receivers-2">
-                  <div class="row">
-                    <div class="single-receiver">
-                      <div class="receiver-details">
-                        <img src="./assets/person.png" alt="person" />
-                        <p>احمد احمد</p>
-                      </div>
-                      <img src="./assets/close 2.png" alt="close" />
-                    </div>
-                    <div class="single-receiver">
-                      <div class="receiver-details">
-                        <img src="./assets/person.png" alt="person" />
-                        <p>احمد احمد</p>
-                      </div>
-                      <img src="./assets/close 2.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="single-receiver">
-                      <div class="receiver-details">
-                        <img src="./assets/person.png" alt="person" />
-                        <p>احمد احمد</p>
-                      </div>
-                      <img src="./assets/close 2.png" alt="close" />
-                    </div>
-                    <div class="single-receiver">
-                      <div class="receiver-details">
-                        <img src="./assets/person.png" alt="person" />
-                        <p>احمد احمد</p>
-                      </div>
-                      <img src="./assets/close 2.png" alt="close" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="arbitary">
-                <div class="main-section section">
-                  <div class="section-details">
-                    <img src="./assets/section.png" />
-                    <p>اسم القسم</p>
-                  </div>
-                  <div class="secondary-section section">
-                    <div class="section-details">
-                      <img src="./assets/secondary-section.png" />
-                      <p>قسم فرعي</p>
-                    </div>
-                    <div class="secondary-section section">
-                      <div class="section-details">
-                        <img src="./assets/secondary-section.png" />
-                        <p>قسم فرعي</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="editor" style="flex: 2">
+            <div class="editor">
+              <div class="attachments">
+                <h3>المرفقات</h3>
+                <input
+                  type="file"
+                  name="attachment"
+                  class="styled-file-input"
+                />
+              </div>
+              <div class="uploaded-attachments">
+                <h3>المرفقات المرفوعة</h3>
+                <div class="files">
+                  <div class="file">
+                    <div class="img-details">
+                      <img src="./assets/exchange.png" alt="exchange" />
+                      <div class="file-details">
+                        <p class="filename">filename.pdf</p>
+                        <p class="filesize">500kb</p>
+                      </div>
+                    </div>
+                    <img src="./assets/close.png" alt="close" />
+                  </div>
+                  <div class="file">
+                    <div class="img-details">
+                      <img src="./assets/exchange.png" alt="exchange" />
+                      <div class="file-details">
+                        <p class="filename">filename.pdf</p>
+                        <p class="filesize">500kb</p>
+                      </div>
+                    </div>
+                    <img src="./assets/close.png" alt="close" />
+                  </div>
+                </div>
+              </div>
               <div class="editing">
+                <div class="tools">
+                  <div class="tools-group">
+                    <div class="tool">
+                      <img src="./assets/Folder.png" alt="Folder" />
+                      <p>فتح</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/undo.png" alt="undo" />
+                      <p>التراجع عن</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/redo.png" alt="redo" />
+                      <p>إعادة</p>
+                    </div>
+                  </div>
+                  <div class="tools-group">
+                    <div class="tool">
+                      <img src="./assets/Image.png" alt="Image" />
+                      <p>الصورة</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/Table.png" alt="Table" />
+                      <p>الجدول</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/link.png" alt="link" />
+                      <p>الارتباط</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/Menu.png" alt="Menu" />
+                      <p>الارتباط</p>
+                    </div>
+                  </div>
+                  <div class="tools-group">
+                    <div class="tool">
+                      <img src="./assets/search.png" alt="Image" />
+                      <p>العثور</p>
+                    </div>
+                  </div>
+                  <div class="tools-group">
+                    <div class="tool">
+                      <img src="./assets/Folder.png" alt="Folder" />
+                      <p>التعليقات</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/File minus.png" alt="minus" />
+                      <p>تعقب التغييرات</p>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="./assets/clipboard-text-alt_svgrepo.com.png"
+                        alt="clipboard"
+                      />
+                      <p>الحافظة المحلية</p>
+                    </div>
+                    <div class="tool">
+                      <img src="./assets/expand.png" alt="expand" />
+                      <p>توسيع</p>
+                    </div>
+                  </div>
+                </div>
                 <div class="file-preview">
-                  <iframe
-                    src="https://research.google.com/pubs/archive/44678.pdf"
-                    width="100%"
-                    height="900px"
-                  >
-                  </iframe>
+                  <div class="create">
+                    <img src="./assets/id.png" alt="id" />
+                    <span>إنشاء من نموذج الإدارة</span>
+                  </div>
+                  <img src="./assets/مذكرة.png" alt="مذكره" class="note" />
                 </div>
               </div>
             </div>
@@ -393,15 +536,6 @@
             document.querySelector(".notification").classList.toggle("active");
           }
         });
-      let sections = document.querySelectorAll(".section");
-      sections.forEach((sec) => {
-        sec.addEventListener("click", (e) => {
-          e.stopPropagation();
-          sec.classList.toggle("expanded");
-          sec.querySelector(".section")?.classList.toggle("active");
-          console.log(sec);
-        });
-      });
     </script>
   </body>
 </html>

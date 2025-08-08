@@ -145,17 +145,19 @@
               </div>
             </div>
             <div class="get-result">
-              <a href="">الذهاب</a>
+              <a href="./reply.html">الذهاب</a>
             </div>
           </div>
         </div>
         <aside>
           <div class="top-options">
             <div class="back-arrow">
-              <a href="./"><img src="./assets/arrow.png" alt="arrow" /></a>
+              <a href="./main.html"
+                ><img src="./assets/arrow.png" alt="arrow"
+              /></a>
             </div>
             <div class="logo-cont">
-              <a href="./homepage.html">
+              <a href="./main.html">
                 <img src="./assets/Group 2.png" alt="logo" />
                 <img
                   src="./assets/Group 3.png"
@@ -176,8 +178,10 @@
           <div class="export-section">
             <div class="export-btn">إصدار</div>
             <div class="export-card">
-              <div><a href="">إصدار مذكرة جديدة</a></div>
-              <div class="answer-note"><a href="">الرد علي مذكرة</a></div>
+              <div><a href="./export.html">إصدار مذكرة جديدة</a></div>
+              <div class="answer-note">
+                <a href="">الرد علي مذكرة</a>
+              </div>
             </div>
           </div>
           <div class="tabs">
@@ -213,7 +217,7 @@
               </li>
               <li class="active">
                 <img src="./assets/search.png" />
-                <a href="./search-admin-files.html"> بحث</a>
+                <a href="./search-transactions.html"> بحث</a>
               </li>
               <li>
                 <img src="./assets/note.png" />
@@ -222,7 +226,7 @@
             </ul>
             <div class="signout">
               <img src="./assets/Logout.png" />
-              <a href="">تسجيل الخروج</a>
+              <a href="./login.html">تسجيل الخروج</a>
             </div>
           </div>
         </aside>
@@ -270,61 +274,55 @@
                   <input type="number" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
-                  <label for="id">سنة التشريع</label>
+                  <label for="id">الادارة المعنيه</label>
                   <input name="id" type="number" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
-                  <label for="word">بحث بالكلمة</label>
+                  <label for="word">الموضوع</label>
                   <input name="word" type="text" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
-                  <label for="word">بحث بالكلمة</label>
-                  <input name="word" type="text" placeholder="اكتب هنا" />
+                  <label for="word">نوع الكتاب</label>
+                  <select name="transaction-from" type="date">
+                    <option value="" selected disabled>اختر</option>
+                  </select>
                 </div>
               </div>
 
               <div class="four-input-row full">
                 <div class="input-quarter">
-                  <label for="word">بحث بالكلمة</label>
+                  <label for="word">رقم المعاملة</label>
                   <input name="word" type="text" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
-                  <label for="word">بحث بالكلمة</label>
+                  <label for="word">الرقم المدني</label>
                   <input name="word" type="text" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
-                  <label for="word">بحث بالكلمة</label>
+                  <label for="word">الملاحظات</label>
                   <input name="word" type="text" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
-                  <label for="word">بحث بالكلمة</label>
+                  <label for="word">رقم المرجع</label>
                   <input name="word" type="text" placeholder="اكتب هنا" />
                 </div>
               </div>
               <div class="four-input-row full">
                 <div class="input-quarter">
                   <label for="transaction-from">تاريخ المعاملة من</label>
-                  <select name="transaction-from" type="date">
-                    <option value="" selected disabled>اختر</option>
-                  </select>
+                  <input name="subject" type="date" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
                   <label for="transaction-to">تاريخ المعاملة الي</label>
-                  <select name="transaction-to" type="date">
-                    <option value="" selected disabled>اختر</option>
-                  </select>
+                  <input name="subject" type="date" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
                   <label for="book-from">تاريخ الكتاب من</label>
-                  <select name="book-from" type="date">
-                    <option value="" selected disabled>اختر</option>
-                  </select>
+                  <input name="subject" type="date" placeholder="اكتب هنا" />
                 </div>
                 <div class="input-quarter">
                   <label for="book-to">تاريخ الكتاب الي</label>
-                  <select name="book-to" type="date">
-                    <option value="" selected disabled>اختر</option>
-                  </select>
+                  <input name="subject" type="date" placeholder="اكتب هنا" />
                 </div>
               </div>
               <div class="form-actions">
@@ -364,8 +362,18 @@
               <p class="col-head">تاريخ التسليم</p>
               <p class="col-head">الملاحظات</p>
             </div>
-            <div class="data-row">
+            <a class="data-row" href="./search-results.html">
+              <p class="col-head">State</p>
+              <p class="col-head">اسم الجهة</p>
+              <p class="col-head">15/02/2025</p>
+              <p class="col-head">123</p>
               <p class="col-head">1</p>
+              <p class="col-head"></p>
+              <p class="col-head">15/02/2025</p>
+              <p class="col-head">تخفيف ساعات</p>
+            </a>
+            <div class="data-row">
+              <p class="col-head">State</p>
               <p class="col-head">اسم الجهة</p>
               <p class="col-head">15/02/2025</p>
               <p class="col-head">123</p>
@@ -375,7 +383,7 @@
               <p class="col-head">تخفيف ساعات</p>
             </div>
             <div class="data-row">
-              <p class="col-head">1</p>
+              <p class="col-head">State</p>
               <p class="col-head">اسم الجهة</p>
               <p class="col-head">15/02/2025</p>
               <p class="col-head">123</p>
@@ -385,7 +393,7 @@
               <p class="col-head">تخفيف ساعات</p>
             </div>
             <div class="data-row">
-              <p class="col-head">1</p>
+              <p class="col-head">State</p>
               <p class="col-head">اسم الجهة</p>
               <p class="col-head">15/02/2025</p>
               <p class="col-head">123</p>
@@ -395,7 +403,7 @@
               <p class="col-head">تخفيف ساعات</p>
             </div>
             <div class="data-row">
-              <p class="col-head">1</p>
+              <p class="col-head">State</p>
               <p class="col-head">اسم الجهة</p>
               <p class="col-head">15/02/2025</p>
               <p class="col-head">123</p>
@@ -405,17 +413,7 @@
               <p class="col-head">تخفيف ساعات</p>
             </div>
             <div class="data-row">
-              <p class="col-head">1</p>
-              <p class="col-head">اسم الجهة</p>
-              <p class="col-head">15/02/2025</p>
-              <p class="col-head">123</p>
-              <p class="col-head">1</p>
-              <p class="col-head"></p>
-              <p class="col-head">15/02/2025</p>
-              <p class="col-head">تخفيف ساعات</p>
-            </div>
-            <div class="data-row">
-              <p class="col-head">1</p>
+              <p class="col-head">State</p>
               <p class="col-head">اسم الجهة</p>
               <p class="col-head">15/02/2025</p>
               <p class="col-head">123</p>

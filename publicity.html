@@ -145,17 +145,19 @@
               </div>
             </div>
             <div class="get-result">
-              <a href="">الذهاب</a>
+              <a href="./reply.html">الذهاب</a>
             </div>
           </div>
         </div>
         <aside>
           <div class="top-options">
             <div class="back-arrow">
-              <a href="./"><img src="./assets/arrow.png" alt="arrow" /></a>
+              <a href="./main.html"
+                ><img src="./assets/arrow.png" alt="arrow"
+              /></a>
             </div>
             <div class="logo-cont">
-              <a href="./homepage.html">
+              <a href="./main.html">
                 <img src="./assets/Group 2.png" alt="logo" />
                 <img
                   src="./assets/Group 3.png"
@@ -176,8 +178,10 @@
           <div class="export-section">
             <div class="export-btn">إصدار</div>
             <div class="export-card">
-              <div><a href="">إصدار مذكرة جديدة</a></div>
-              <div class="answer-note"><a href="">الرد علي مذكرة</a></div>
+              <div><a href="./export.html">إصدار مذكرة جديدة</a></div>
+              <div class="answer-note">
+                <a href="">الرد علي مذكرة</a>
+              </div>
             </div>
           </div>
           <div class="tabs">
@@ -213,7 +217,7 @@
               </li>
               <li>
                 <img src="./assets/search.png" />
-                <a href="./search-admin-files.html"> بحث</a>
+                <a href="./search-transactions.html"> بحث</a>
               </li>
               <li>
                 <img src="./assets/note.png" />
@@ -222,7 +226,7 @@
             </ul>
             <div class="signout">
               <img src="./assets/Logout.png" />
-              <a href="">تسجيل الخروج</a>
+              <a href="./login.html">تسجيل الخروج</a>
             </div>
           </div>
         </aside>
@@ -317,41 +321,27 @@
                   <p>الموضوع</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p style="font-size: 14px">موضوع القرارات والتعامبم</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p style="font-size: 14px">موضوع القرارات والتعامبم</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p style="font-size: 14px">موضوع القرارات والتعامبم</p>
                 </div>
               </div>
               <div class="column">
                 <div class="first-item">
-                  <p>اسم الجهة</p>
+                  <p>تاريخ التحويل</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p>05/12/2024</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p>05/12/2024</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="first-item">
-                  <p>تاريخ المعاملة</p>
-                </div>
-                <div class="item">
-                  <p>State</p>
-                </div>
-                <div class="item">
-                  <p>State</p>
-                </div>
-                <div class="item">
-                  <p>State</p>
+                  <p>05/12/2024</p>
                 </div>
               </div>
               <div class="column">
@@ -359,32 +349,46 @@
                   <p>رقم المعاملة</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p class="transaction-head">20251205</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p class="transaction-head">20251205</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p class="transaction-head">20251205</p>
                 </div>
               </div>
               <div class="column">
                 <div class="first-item">
-                  <p>رقم المرجع</p>
+                  <p>اسم المرسل</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p>إدارة الشؤون الإارية</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p>إدارة الشؤون الإارية</p>
                 </div>
                 <div class="item">
-                  <p>State</p>
+                  <p>إدارة الشؤون الإارية</p>
                 </div>
               </div>
               <div class="column">
                 <div class="first-item">
                   <p>الملاحظات</p>
+                </div>
+                <div class="item">
+                  <p>تعميم</p>
+                </div>
+                <div class="item">
+                  <p>تعميم</p>
+                </div>
+                <div class="item">
+                  <p>تعميم</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="first-item">
+                  <p>الحالة</p>
                 </div>
                 <div class="item">
                   <p>التعميم</p>
@@ -526,6 +530,8 @@
             document.querySelector(".notification").classList.toggle("active");
           }
         });
+
+      let dataExpander = document.querySelectorAll(".expand");
     </script>
   </body>
 </html>
